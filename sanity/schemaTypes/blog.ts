@@ -1,32 +1,35 @@
 export default{
     name: 'blog',
     type: 'document',
-    title: 'Blog',
+    title: 'Base de Conocimientos',
     fields: [
         {
             name: 'title',
             type: 'string',
-            title: 'Title of Case',
+            title: 'Titulo del Caso',
         },
         {
             name: 'slug',
             type: 'slug',
-            title: 'Slug of Case',
+            title: 'URL del Caso',
+            options: {
+                source: 'title',
+            },
         },
         {
             name: 'titleImage',
             type: 'image',
-            title: 'Title Image',
+            title: 'Titulo Imagen',
         },
         {
             name: 'smallDescription',
             type: 'text',
-            title: 'Small description',
+            title: 'Descripción',
         },
         {
             name: 'content',
             type: 'array',
-            title: 'Content',
+            title: 'Solución',
             of: [
                 {
                     type: 'block',
